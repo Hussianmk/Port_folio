@@ -94,62 +94,162 @@
   </div>
 </section>
 
+
 <section class="section" id="projects">
   <p class="eyebrow">03 / MY WORK</p>
-  <h2>Ideas in <span>action.</span></h2>
+  <h2>Projects I've <span>built.</span></h2>
+  <p class="description">
+    Real-world ideas transformed into practical digital solutions.
+  </p>
 
-  <div class="project">
-    <div class="project-art smartbus">
-      <span>SMARTBUS</span>
-      <div class="route"></div>
-      <div class="map-point">●</div>
-      <div class="map-point second">●</div>
-      <div class="map-info">LIVE TRANSIT · IN DEVELOPMENT</div>
+  <!-- SMARTBUS PROJECT -->
+  <article class="project project-card reveal">
+    <div class="project-art smartbus-art">
+
+      <div class="mock-header">
+        <span>SMARTBUS</span>
+        <span class="live"><i></i> LIVE TRACKING</span>
+      </div>
+
+      <div class="map-ui">
+        <div class="map-road road-one"></div>
+        <div class="map-road road-two"></div>
+        <div class="map-road road-three"></div>
+
+        <div class="map-route"></div>
+
+        <div class="bus-stop stop-one">A</div>
+        <div class="bus-stop stop-two">B</div>
+        <div class="bus-stop stop-three">C</div>
+
+        <div class="bus-marker">🚌</div>
+
+        <div class="map-label label-one">Central Bus Stand</div>
+        <div class="map-label label-two">College Stop</div>
+      </div>
+
+      <div class="eta-card">
+        <div>
+          <small>BUS ARRIVAL</small>
+          <h3>08 <span>MIN</span></h3>
+        </div>
+        <div class="eta-status">On Time</div>
+      </div>
+
+      <div class="mock-footer">
+        <span>ROUTE TRACKING</span>
+        <span>SMART TRANSPORT</span>
+      </div>
     </div>
+
     <div class="project-info">
-      <small>01 / TRANSPORT TECHNOLOGY</small>
-      <h3>AI Powered SmartBus Tracking System</h3>
+      <small>01 / SMART TRANSPORTATION</small>
+      <h3>Real-Time Bus Tracking System</h3>
+
       <p>
-        A smart transit platform designed to help passengers
-        view bus locations and estimated arrival times.
-        Includes Passenger, Driver and Admin modules,
-        tracking and transport analytics.
+        SmartBus is a public transportation platform designed
+        to help passengers track buses, view routes and check
+        estimated arrival times. It includes Passenger, Driver
+        and Admin modules with location tracking and transport
+        analytics.
       </p>
-      <div class="tags">
-        <span>Python</span><span>Flask</span><span>MySQL</span>
-        <span>JavaScript</span><span>Leaflet.js</span>
-        <span>Scikit-learn</span>
-      </div>
-      <p class="project-status">● IN PROGRESS</p>
-    </div>
-  </div>
 
-  <div class="project reverse">
-    <div class="project-art ncc">
-      <div class="ncc-logo">NCC</div>
-      <span>CADET MANAGEMENT SYSTEM</span>
-      <div class="dashboard">
-        <div></div><div></div><div></div>
-        <div></div><div></div><div></div>
+      <div class="tags">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>MySQL</span>
+        <span>JavaScript</span>
+        <span>Leaflet.js</span>
+        <span>OpenStreetMap</span>
+      </div>
+
+      <p class="project-status">● IN DEVELOPMENT</p>
+    </div>
+  </article>
+
+  <!-- NCC PROJECT -->
+  <article class="project project-card reveal">
+
+    <div class="project-art ncc-art">
+
+      <div class="ncc-top">
+        <div>
+          <small>NCC ARMY WING</small>
+          <h3>Cadet Portal</h3>
+        </div>
+        <span class="admin-label">ADMIN</span>
+      </div>
+
+      <div class="ncc-stats">
+        <div>
+          <small>TOTAL CADETS</small>
+          <strong>120</strong>
+        </div>
+        <div>
+          <small>ATTENDANCE</small>
+          <strong>92%</strong>
+        </div>
+        <div>
+          <small>ANNOUNCEMENTS</small>
+          <strong>08</strong>
+        </div>
+      </div>
+
+      <div class="attendance-panel">
+        <div class="attendance-heading">
+          <strong>Attendance Records</strong>
+          <small>Saturday Session</small>
+        </div>
+
+        <div class="cadet-row">
+          <span class="cadet-avatar">A</span>
+          <span>Cadet 01</span>
+          <b class="present">PRESENT</b>
+        </div>
+
+        <div class="cadet-row">
+          <span class="cadet-avatar">B</span>
+          <span>Cadet 02</span>
+          <b class="present">PRESENT</b>
+        </div>
+
+        <div class="cadet-row">
+          <span class="cadet-avatar">C</span>
+          <span>Cadet 03</span>
+          <b class="absent">ABSENT</b>
+        </div>
+      </div>
+
+      <div class="ncc-bottom">
+        ROLE-BASED MANAGEMENT SYSTEM
       </div>
     </div>
+
     <div class="project-info">
-      <small>02 / MANAGEMENT SYSTEM</small>
+      <small>02 / WEB APPLICATION</small>
       <h3>NCC Cadet Management System</h3>
+
       <p>
-        A role-based web portal built to organize cadet records,
-        attendance, announcements and administrative workflows.
-        Supports four user roles and an automated Saturday
-        attendance and change-request process.
+        A digital management platform for NCC Army Wing
+        to manage cadet information, attendance, announcements
+        and administrative activities. It provides role-based
+        access for ANO, Cadet Captain, Leading Cadet and Cadets.
       </p>
+
       <div class="tags">
-        <span>Python</span><span>Flask</span><span>HTML</span>
-        <span>CSS</span><span>JavaScript</span><span>SQLite</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Flask</span>
+        <span>Database</span>
       </div>
+
       <p class="project-status">● DEVELOPED</p>
     </div>
-  </div>
+  </article>
 </section>
+
 
 <section class="section" id="education">
   <p class="eyebrow">04 / EDUCATION</p>
