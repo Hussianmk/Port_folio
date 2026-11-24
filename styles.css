@@ -168,18 +168,22 @@ h2 span {
 }
 
 .avatar {
-  width: 210px;
-  height: 210px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 100px;
-  font-weight: 800;
-  color: #071411;
-  background: radial-gradient(circle at 30% 20%,#d1fff4,#65e6d1 55%,#647bdb);
-  box-shadow: 0 0 80px #65e6d144;
-  animation: float 4s ease-in-out infinite;
-  z-index: 2;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #65e6d1;
+    box-shadow: 0 0 80px #65e6d144;
+    animation: float 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .floating-card {
