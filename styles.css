@@ -301,6 +301,385 @@ h2 > span { color: #8995ab; background: none; }
   color: var(--muted);
 }
 
+
+/* ===== PREMIUM PROJECT DESIGNS ===== */
+
+.project-card {
+  overflow: hidden;
+  transition: transform .5s ease, border-color .5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #65e6d166;
+}
+
+.project-art {
+  min-width: 0;
+  padding: 22px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* SMARTBUS */
+
+.smartbus-art {
+  height: 340px;
+  background: #101c2c;
+  border: 1px solid #29435b;
+}
+
+.mock-header,
+.mock-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 3;
+}
+
+.mock-header > span:first-child {
+  font-weight: bold;
+  color: #65e6d1;
+}
+
+.live {
+  color: #65e6d1;
+}
+
+.live i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #65e6d1;
+  border-radius: 50%;
+  margin-right: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+.map-ui {
+  position: absolute;
+  inset: 60px 0 55px;
+  overflow: hidden;
+  background-color: #152638;
+  background-image:
+    linear-gradient(30deg, transparent 45%, #284055 46%, #284055 48%, transparent 49%),
+    linear-gradient(120deg, transparent 45%, #284055 46%, #284055 48%, transparent 49%),
+    linear-gradient(#1c3447 1px, transparent 1px),
+    linear-gradient(90deg, #1c3447 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 35px 35px, 35px 35px;
+}
+
+.map-road {
+  position: absolute;
+  height: 8px;
+  background: #334d60;
+  border: 1px solid #456178;
+  border-radius: 20px;
+}
+
+.road-one {
+  width: 130%;
+  top: 35%;
+  left: -10%;
+  transform: rotate(-20deg);
+}
+
+.road-two {
+  width: 110%;
+  top: 65%;
+  left: 5%;
+  transform: rotate(25deg);
+}
+
+.road-three {
+  width: 90%;
+  top: 45%;
+  left: 25%;
+  transform: rotate(75deg);
+}
+
+.map-route {
+  position: absolute;
+  width: 190px;
+  height: 125px;
+  left: 25%;
+  top: 12%;
+  border: 4px solid transparent;
+  border-top-color: #65e6d1;
+  border-right-color: #65e6d1;
+  border-bottom-color: #65e6d1;
+  border-radius: 50%;
+  transform: rotate(20deg);
+  filter: drop-shadow(0 0 5px #65e6d1);
+}
+
+.bus-stop {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #65e6d1;
+  color: #071411;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.stop-one { top: 20%; left: 20%; }
+.stop-two { top: 55%; left: 48%; }
+.stop-three { top: 30%; right: 17%; }
+
+.bus-marker {
+  position: absolute;
+  top: 38%;
+  left: 52%;
+  font-size: 28px;
+  z-index: 3;
+  animation: busMove 4s ease-in-out infinite alternate;
+}
+
+.map-label {
+  position: absolute;
+  background: #0c1827;
+  padding: 5px 8px;
+  color: #c9d9e8;
+  border-radius: 4px;
+  font-size: 9px;
+}
+
+.label-one { top: 7%; left: 5%; }
+.label-two { bottom: 8%; right: 5%; }
+
+.eta-card {
+  position: absolute;
+  bottom: 68px;
+  left: 30px;
+  right: 30px;
+  z-index: 4;
+  padding: 12px 16px;
+  background: #0b1727ee;
+  border: 1px solid #65e6d155;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eta-card small {
+  color: #94a9bd;
+  font-size: 8px;
+}
+
+.eta-card h3 {
+  color: #65e6d1;
+  font-size: 23px;
+}
+
+.eta-card h3 span { font-size: 10px; }
+
+.eta-status {
+  color: #65e6d1;
+  font-size: 10px;
+}
+
+.mock-footer {
+  position: absolute;
+  bottom: 23px;
+  left: 22px;
+  right: 22px;
+  color: #8295a9;
+  font-size: 8px;
+}
+
+/* NCC DASHBOARD */
+
+.ncc-art {
+  height: 340px;
+  background: linear-gradient(145deg,#14271f,#0d1816);
+  border: 1px solid #41634c;
+}
+
+.ncc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ncc-top small {
+  color: #9dc8a8;
+  font: 9px 'DM Mono', monospace;
+}
+
+.ncc-top h3 {
+  color: #e3f1e5;
+  font-size: 19px;
+  margin-top: 7px;
+}
+
+.admin-label {
+  padding: 7px 12px;
+  border: 1px solid #557e5e;
+  border-radius: 5px;
+  color: #a7d9ad;
+  font-size: 9px;
+}
+
+.ncc-stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 9px;
+  margin-top: 23px;
+}
+
+.ncc-stats div {
+  padding: 12px 8px;
+  background: #1b3427;
+  border: 1px solid #3a5c43;
+  border-radius: 6px;
+}
+
+.ncc-stats small {
+  display: block;
+  font-size: 7px;
+  color: #a5c5ab;
+}
+
+.ncc-stats strong {
+  display: block;
+  margin-top: 9px;
+  font-size: 22px;
+  color: #e0f4e3;
+}
+
+.attendance-panel {
+  margin-top: 16px;
+  padding: 13px;
+  background: #0b1913;
+  border: 1px solid #38533e;
+  border-radius: 7px;
+}
+
+.attendance-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.attendance-heading strong {
+  font-size: 10px;
+  color: #e0f4e3;
+}
+
+.attendance-heading small {
+  color: #8caa93;
+  font-size: 8px;
+}
+
+.cadet-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-top: 1px solid #ffffff12;
+  color: #d7e5da;
+  font-size: 9px;
+}
+
+.cadet-avatar {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #31573c;
+}
+
+.cadet-row b {
+  margin-left: auto;
+  font: 8px 'DM Mono',monospace;
+}
+
+.present { color: #77d69b; }
+.absent { color: #ff8a8a; }
+
+.ncc-bottom {
+  margin-top: 12px;
+  text-align: right;
+  color: #92b49a;
+  font: 8px 'DM Mono',monospace;
+}
+
+/* PROJECT ANIMATIONS */
+
+@keyframes pulse {
+  50% { opacity: .3; transform: scale(.8); }
+}
+
+@keyframes busMove {
+  from { transform: translate(-10px,5px); }
+  to { transform: translate(12px,-7px); }
+}
+
+/* Responsive project visuals */
+
+@media(max-width:600px) {
+  .project-art {
+    height: 320px;
+    padding: 17px;
+  }
+
+  .smartbus-art .eta-card {
+    left: 18px;
+    right: 18px;
+  }
+
+  .ncc-stats div { padding: 10px 5px; }
+}
+
+
+/* Scroll reveal */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger project cards */
+
+.project-card:nth-of-type(2) {
+  transition-delay: .12s;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 25px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
