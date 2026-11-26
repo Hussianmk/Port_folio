@@ -277,35 +277,76 @@ button {
   opacity: .22;
 }
 
+
+/* PROFILE PHOTO FIX */
+
 .main-orb {
+  position: relative;
+  width: 240px;
+  height: 240px;
   overflow: hidden;
-  border: 3px solid rgba(92, 225, 230, 0.8);
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  border: 4px solid #5ce1e6;
+  box-shadow:
+    0 0 15px rgba(92,225,230,.5),
+    0 0 45px rgba(92,225,230,.2);
+  animation: orb-float 6s ease-in-out infinite;
 }
 
 .main-orb img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%;
   border-radius: 50%;
-  display: block;
 }
 
-.main-orb {
-  width: 220px;
-  height: 220px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 25%, #d7ffff 0%, #5ce1e6 9%, #4668b8 35%, #33206d 72%, #101326 100%);
-  box-shadow:
-    inset -25px -30px 55px rgba(0,0,0,.65),
-    inset 10px 10px 25px rgba(255,255,255,.25),
-    0 0 80px rgba(92,225,230,.25);
-  animation: orb-float 6s ease-in-out infinite, orb-rotate 12s linear infinite;
-  transform-style: preserve-3d;
+.orb-text,
+.orb-shine {
+  display: none !important;
 }
+
+/* Mobile alignment */
+@media (max-width: 650px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-height: 340px;
+    margin: 35px 0 20px;
+  }
+
+  .main-orb {
+    width: 205px;
+    height: 205px;
+  }
+
+  .floating-card {
+    z-index: 5;
+  }
+
+  .card-top {
+    right: 0;
+    top: 15px;
+  }
+
+  .card-bottom {
+    left: 0;
+    bottom: 15px;
+  }
+}
+
 
 .orb-shine {
   position: absolute;
