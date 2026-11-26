@@ -1,47 +1,41 @@
 
 // Mobile navigation
-const menu = document.getElementById("menu");
+const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
 
-menu.addEventListener("click", () => {
+menuToggle.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
 
 // Close menu after clicking a navigation link
-nav.querySelectorAll("a").forEach((link) => {
+document.querySelectorAll(".nav a").forEach(link => {
   link.addEventListener("click", () => {
     nav.classList.remove("open");
   });
 });
 
-// Scroll progress indicator
-const progress = document.getElementById("progress");
+// Scroll progress bar
+const progressBar = document.getElementById("progressBar");
 
 window.addEventListener("scroll", () => {
-  const scrollable =
+  const scrollTop = window.scrollY;
+  const scrollHeight =
     document.documentElement.scrollHeight - window.innerHeight;
 
-  const percentage =
-    scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  const progress = scrollHeight > 0
+    ? (scrollTop / scrollHeight) * 100
+    : 0;
 
-  progress.style.width = percentage + "%";
+  progressBar.style.width = `${progress}%`;
 });
 
-// Footer current year
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+// Reveal elements when they enter the screen
+const revealElements = document.querySelectorAll(".reveal");
 
-
-// Smooth reveal animation when sections enter the screen
-
-const revealElements = document.querySelectorAll(
-  '.section, .project-card, .timeline-item, .contact'
-);
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      entry.target.classList.add("visible");
       observer.unobserve(entry.target);
     }
   });
@@ -49,23 +43,37 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.12
 });
 
-revealElements.forEach((element) => {
-  element.classList.add('reveal');
+revealElements.forEach(element => {
   observer.observe(element);
 });
 
-// Smooth navigation
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const target = document.querySelector(link.getAttribute('href'));
+// 3D tilt effect on skill cards (desktop only)
+const skillCards = document.querySelectorAll(".skill-card");
 
-    if (target) {
-      event.preventDefault();
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  skillCards.forEach(card => {
+    card.addEventListener("mousemove", event => {
+      const rect = card.getBoundingClientRect();
+
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = (centerY - y) / 18;
+      const rotateY = (x - centerX) / 18;
+
+      card.style.transform =
+        `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
   });
-});
+}
 
+// Automatically update copyright year
+document.getElementById("year").textContent =
+  new Date().getFullYear();
